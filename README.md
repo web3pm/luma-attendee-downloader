@@ -2,6 +2,17 @@
 
 Chrome extension: download attendees from a Luma event page and download as CSV.
 
+## How it works & permissions
+
+The extension is open source and does not send data to any external service. It only runs on Luma event pages (`lu.ma`, `luma.com`). It reads attendee cards already visible in the page DOM, builds a CSV in memory, and triggers a download to your machine. No telemetry, no analytics, no outbound calls to third parties.
+
+**Permissions:**
+
+- **activeTab / scripting** — Used to show the extension popup and run the scraper when you click "Start download."
+- **Host access: `https://lu.ma/*`, `https://luma.com/*`** — The content script is limited to these origins; it cannot read or run on other sites.
+
+Data never leaves the browser except as the CSV file you choose to download.
+
 ## Install (unpacked)
 
 **From a release (recommended)**
