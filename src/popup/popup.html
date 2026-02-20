@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 320px; padding: 12px; font: 14px/1.4 system-ui, sans-serif; margin: 0; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    .row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    button { padding: 8px 14px; cursor: pointer; }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    #status { color: #666; min-height: 1.4em; }
+    #download { margin-left: 0; }
+  </style>
+</head>
+<body>
+  <h1>Luma Attendee Downloader</h1>
+  <div class="row">
+    <button id="start">Start download</button>
+    <button id="download" disabled>Download CSV</button>
+  </div>
+  <div id="status">Open a Luma event page, open the attendees list, then click Start download.</div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Luma Attendee Downloader",
+  "version": "0.1.0",
+  "description": "Download Luma event attendees and export to CSV",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://lu.ma/*", "https://luma.com/*"],
+  "action": {
+    "default_popup": "dist/popup/popup.html",
+    "default_title": "Luma Attendee Downloader"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://lu.ma/*", "https://luma.com/*"],
+      "js": ["dist/content/lumaAttendeesDownloader.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
